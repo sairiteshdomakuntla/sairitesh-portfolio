@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
@@ -6,8 +5,11 @@ import SkillsSection from '@/components/SkillsSection';
 import ProjectsSection from '@/components/ProjectsSection';
 import CertificationsSection from '@/components/CertificationsSection';
 import ContactSection from '@/components/ContactSection';
+import CommunitySection from '@/components/CommunitySection';
+import TimelineSection from '@/components/TimelineSection';
 import Footer from '@/components/Footer';
 import NavBar from '@/components/NavBar';
+import ExperienceSection from '@/components/ExperienceSection';
 
 const Index = () => {
   // Add reveal animations on scroll
@@ -47,9 +49,12 @@ const Index = () => {
         <NavBar />
         <main>
           <HeroSection />
+          {/* <TimelineSection /> */}
           <AboutSection />
           <SkillsSection />
+          <ExperienceSection />
           <ProjectsSection />
+          <CommunitySection />
           <CertificationsSection />
           <ContactSection />
         </main>

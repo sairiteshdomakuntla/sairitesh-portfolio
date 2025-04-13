@@ -12,7 +12,16 @@ const NavBar = () => {
       setScrolled(window.scrollY > 20);
       
       // Set active section based on scroll position
-      const sections = ['hero', 'about', 'skills', 'projects', 'certifications', 'contact'];
+      const sections = [
+        'hero',
+        'timeline',
+        'about',
+        'skills',
+        'projects',
+        'community',
+        'certifications',
+        'contact'
+      ];
       const currentSection = sections.find(section => {
         const element = document.getElementById(section);
         if (!element) return false;
@@ -54,7 +63,16 @@ const NavBar = () => {
         </div>
         
         <div className="hidden md:flex space-x-1">
-          {['Hero', 'About', 'Skills', 'Projects', 'Certifications', 'Contact'].map((item) => {
+          {[
+            'Hero',
+            // 'Timeline',
+            'About',
+            'Skills',
+            'Projects',
+            'Community',
+            'Certifications',
+            'Contact'
+          ].map((item) => {
             const sectionId = item.toLowerCase();
             return (
               <button

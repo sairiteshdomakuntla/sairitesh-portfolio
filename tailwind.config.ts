@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -88,6 +87,18 @@ export default {
 					'50%': { 
 						boxShadow: '0 0 20px rgba(54, 181, 255, 0.8), 0 0 30px rgba(54, 181, 255, 0.6)' 
 					}
+				},
+				blink: {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'scale-up': {
+					'0%': { transform: 'scale(1)' },
+					'100%': { transform: 'scale(1.05)' }
 				}
 			},
 			animation: {
@@ -95,7 +106,10 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 1s ease-out',
 				'gradient-flow': 'gradient-flow 3s ease infinite',
-				'pulse-glow': 'pulse-glow 2s ease-in-out infinite'
+				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+				'blink': 'blink 1s step-end infinite',
+				'float': 'float 3s ease-in-out infinite',
+				'scale-up': 'scale-up 0.2s ease-out'
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
@@ -107,7 +121,8 @@ export default {
 				'grid-pattern': 'linear-gradient(rgba(54, 181, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(54, 181, 255, 0.03) 1px, transparent 1px)'
 			},
 			backgroundSize: {
-				'grid': '50px 50px'
+				'grid': '50px 50px',
+				'300%': '300%'
 			}
 		}
 	},

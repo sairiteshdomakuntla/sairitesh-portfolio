@@ -1,13 +1,73 @@
 import React, { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
-import { ArrowDown, FileText, Github, Mail, Code2 } from 'lucide-react';
+import { ArrowDown, FileText, Github, Mail, Code2, Trophy, Star, TrendingUp } from 'lucide-react';
+
+const roles = [
+  "FULL-STACK DEVELOPER",
+  "PROBLEM SOLVER",
+  "COMPETITIVE PROGRAMMER"
+];
+
+// Using real data from your profiles
+const cpStats = [
+  {
+    platform: "LeetCode",
+    rating: "1600+",
+    solved: "100+",
+    icon: <Trophy className="w-4 h-4 text-yellow-400" />,
+    href: "https://leetcode.com/sairitesh",
+    cardUrl: "https://leetcard.jacoblin.cool/sairitesh?theme=dark&font=Poppins&ext=contest&animation=true"
+  },
+  {
+    platform: "CodeChef",
+    rating: "1539",
+    solved: "500+",
+    stars: "2★",
+    icon: <Star className="w-4 h-4 text-yellow-400" />,
+    href: "https://www.codechef.com/users/sairitesh",
+    globalRank: "26361",
+    countryRank: "23695"
+  },
+  {
+    platform: "Codeforces",
+    rating: "1200+",
+    solved: "70+",
+    icon: <TrendingUp className="w-4 h-4 text-yellow-400" />,
+    href: "https://codeforces.com/profile/sairiteshdomakuntla"
+  }
+];
 
 const HeroSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [text, setText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [hoveredPlatform, setHoveredPlatform] = useState<string | null>(null);
   
   useEffect(() => {
     setIsLoaded(true);
   }, []);
+
+  // Typing animation effect
+  useEffect(() => {
+    const currentRole = roles[roleIndex];
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        setText(currentRole.substring(0, text.length + 1));
+      } else {
+        setText(currentRole.substring(0, text.length - 1));
+      }
+    }, isDeleting ? 50 : 100);
+
+    if (!isDeleting && text === currentRole) {
+      setTimeout(() => setIsDeleting(true), 2000);
+    } else if (isDeleting && text === '') {
+      setIsDeleting(false);
+      setRoleIndex((roleIndex + 1) % roles.length);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [text, roleIndex, isDeleting]);
 
   return (
     <section id="hero" className="min-h-screen grid-bg flex flex-col items-center justify-center relative px-4 overflow-hidden">
@@ -19,10 +79,10 @@ const HeroSection = () => {
         {/* Animated intro */}
         <div className="space-y-6">
           <p className={cn(
-            "text-neon-blue font-medium tracking-wider transition-all duration-700 transform",
+            "text-neon-blue font-medium tracking-wider transition-all duration-700 transform h-8",
             isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           )}>
-            FULL-STACK DEVELOPER
+            {text}<span className="animate-blink">|</span>
           </p>
           
           <h1 className={cn(
@@ -39,6 +99,71 @@ const HeroSection = () => {
             I build exceptional and accessible digital experiences for the web.
             Transforming ideas into elegant, functional applications is my passion.
           </p>
+          
+          {/* CP Stats */}
+          <div className={cn(
+            "flex flex-wrap items-center justify-center gap-6 transition-all duration-700 delay-150 transform",
+            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          )}>
+            {cpStats.map((stat, index) => (
+              <a 
+                key={index}
+                href={stat.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white/5 px-6 py-4 rounded-lg border border-white/10 hover:border-neon-blue/50 transition-all group hover:bg-white/10 cursor-pointer relative"
+                style={{ animationDelay: `${index * 150}ms` }}
+                onMouseEnter={() => setHoveredPlatform(stat.platform)}
+                onMouseLeave={() => setHoveredPlatform(null)}
+              >
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="p-2 rounded-full bg-white/5 group-hover:bg-white/10 transition-all">
+                    {stat.icon}
+                  </div>
+                  <span className="text-sm text-gray-400 group-hover:text-neon-blue transition-colors">{stat.platform}</span>
+                </div>
+                <div className="space-y-2">
+                  <div className="flex items-baseline gap-2">
+                    <p className="text-2xl font-bold text-neon-blue group-hover:scale-110 transition-transform">
+                      {stat.rating}
+                    </p>
+                    <p className="text-xs text-gray-400">rating</p>
+                    {stat.stars && (
+                      <span className="text-yellow-400 text-sm ml-1">{stat.stars}</span>
+                    )}
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="flex-1 h-1 bg-white/10 rounded-full overflow-hidden">
+                      <div 
+                        className="h-full bg-gradient-to-r from-neon-blue to-neon-purple rounded-full transition-all duration-1000 group-hover:opacity-100 opacity-75"
+                        style={{ width: `${Math.min((parseInt(stat.solved) / 1000) * 100, 100)}%` }}
+                      />
+                    </div>
+                    <p className="text-xs text-gray-400">
+                      <span className="text-neon-blue font-medium">{stat.solved}</span> solved
+                    </p>
+                  </div>
+                  {stat.globalRank && stat.countryRank && (
+                    <div className="flex justify-between mt-2 text-xs text-gray-400">
+                      <span>Global: <span className="text-neon-blue">#{stat.globalRank}</span></span>
+                      <span>India: <span className="text-neon-blue">#{stat.countryRank}</span></span>
+                    </div>
+                  )}
+                </div>
+
+                {/* Hover Card Preview */}
+                {stat.cardUrl && hoveredPlatform === stat.platform && (
+                  <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 -translate-y-full z-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                    <img 
+                      src={stat.cardUrl} 
+                      alt={`${stat.platform} Stats`} 
+                      className="rounded-lg shadow-xl max-w-[300px]"
+                    />
+                  </div>
+                )}
+              </a>
+            ))}
+          </div>
           
           {/* CTA Buttons */}
           <div className={cn(
@@ -72,50 +197,23 @@ const HeroSection = () => {
               Contact Me
             </a>
           </div>
-
-          {/* Competitive Programming Profiles */}
-          <div className={cn(
-            "flex flex-wrap items-center justify-center gap-4 transition-all duration-700 delay-300 transform",
-            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          )}>
-            <a 
-              href="https://leetcode.com/sairitesh" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="px-4 py-2 bg-white/5 border border-white/10 hover:border-neon-blue/50 text-white rounded-md flex items-center gap-2 transition-all hover:bg-white/10 text-sm"
-            >
-              <Code2 size={16} />
-              LeetCode
-            </a>
-            
-            <a 
-              href="https://www.codechef.com/users/sairitesh" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="px-4 py-2 bg-white/5 border border-white/10 hover:border-neon-blue/50 text-white rounded-md flex items-center gap-2 transition-all hover:bg-white/10 text-sm"
-            >
-              <Code2 size={16} />
-              CodeChef
-            </a>
-            
-            <a 
-              href="https://codeforces.com/profile/sairiteshdomakuntla" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="px-4 py-2 bg-white/5 border border-white/10 hover:border-neon-blue/50 text-white rounded-md flex items-center gap-2 transition-all hover:bg-white/10 text-sm"
-            >
-              <Code2 size={16} />
-              Codeforces
-            </a>
-          </div>
         </div>
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <a href="#about" className="flex flex-col items-center text-gray-400 hover:text-neon-blue transition-colors">
-          <span className="text-sm mb-2">Scroll Down</span>
-          <ArrowDown size={20} />
+      <div className="absolute bottom-8 md:bottom-12 left-1/2 transform -translate-x-1/2">
+        <a 
+          href="#about" 
+          className="flex flex-col items-center text-gray-400 hover:text-neon-blue transition-colors group opacity-75 hover:opacity-100"
+          aria-label="Scroll to About section"
+        >
+          <span className="text-xs md:text-sm mb-2 group-hover:text-neon-blue transition-colors hidden md:block">
+            Scroll Down
+          </span>
+          <div className="flex flex-col items-center gap-1">
+            <ArrowDown size={16} className="animate-bounce md:hidden" />
+            <ArrowDown size={20} className="group-hover:translate-y-1 transition-transform hidden md:block" />
+          </div>
         </a>
       </div>
     </section>
