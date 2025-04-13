@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
-import { ArrowDown, FileText, Github, Mail } from 'lucide-react';
+import { ArrowDown, FileText, Github, Mail, Code2 } from 'lucide-react';
 
 const HeroSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -70,6 +70,42 @@ const HeroSection = () => {
             >
               <Mail size={18} />
               Contact Me
+            </a>
+          </div>
+
+          {/* Competitive Programming Profiles */}
+          <div className={cn(
+            "flex flex-wrap items-center justify-center gap-4 transition-all duration-700 delay-300 transform",
+            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          )}>
+            <a 
+              href="https://leetcode.com/sairitesh" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="px-4 py-2 bg-white/5 border border-white/10 hover:border-neon-blue/50 text-white rounded-md flex items-center gap-2 transition-all hover:bg-white/10 text-sm"
+            >
+              <Code2 size={16} />
+              LeetCode
+            </a>
+            
+            <a 
+              href="https://www.codechef.com/users/sairitesh" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="px-4 py-2 bg-white/5 border border-white/10 hover:border-neon-blue/50 text-white rounded-md flex items-center gap-2 transition-all hover:bg-white/10 text-sm"
+            >
+              <Code2 size={16} />
+              CodeChef
+            </a>
+            
+            <a 
+              href="https://codeforces.com/profile/sairiteshdomakuntla" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="px-4 py-2 bg-white/5 border border-white/10 hover:border-neon-blue/50 text-white rounded-md flex items-center gap-2 transition-all hover:bg-white/10 text-sm"
+            >
+              <Code2 size={16} />
+              Codeforces
             </a>
           </div>
         </div>

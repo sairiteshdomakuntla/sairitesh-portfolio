@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 
@@ -51,7 +50,7 @@ const NavBar = () => {
     >
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-xl font-orbitron font-bold">
-          <span className="text-white">Port<span className="text-neon-blue">folio</span></span>
+          <span className="text-white">Sai<span className="text-neon-blue">Ritesh</span></span>
         </div>
         
         <div className="hidden md:flex space-x-1">
