@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 // Skill categories with their respective technologies
@@ -9,31 +8,31 @@ const skillCategories = [
     skills: [
       { name: "React", level: 90 },
       { name: "TypeScript", level: 85 },
-      { name: "Next.js", level: 80 },
-      { name: "TailwindCSS", level: 95 },
-      { name: "Redux", level: 75 }
+      { name: "HTML/CSS", level: 95 },
+      { name: "JavaScript", level: 90 },
+      { name: "TailwindCSS", level: 85 }
     ]
   },
   {
     name: "Backend",
     icon: "⚙️",
     skills: [
-      { name: "Node.js", level: 85 },
-      { name: "Express", level: 80 },
-      { name: "GraphQL", level: 75 },
-      { name: "NestJS", level: 70 },
-      { name: "Python", level: 65 }
+      { name: "Python", level: 70 },
+      // { name: "Django", level: 85 },
+      { name: "Node.js", level: 80 },
+      { name: "Express", level: 75 },
+      { name: "REST APIs", level: 85 }
     ]
   },
   {
     name: "Database",
     icon: "🗄️",
     skills: [
-      { name: "PostgreSQL", level: 85 },
-      { name: "MongoDB", level: 80 },
-      { name: "Redis", level: 70 },
-      { name: "Firebase", level: 75 },
-      { name: "Prisma", level: 80 }
+      { name: "PostgreSQL", level: 75 },
+      { name: "MongoDB", level: 90 },
+      { name: "SQL", level: 80 },
+      { name: "Database Design", level: 85 },
+      // { name: "ORM", level: 80 }
     ]
   },
   {
@@ -41,10 +40,10 @@ const skillCategories = [
     icon: "🔧",
     skills: [
       { name: "Git", level: 90 },
-      { name: "Docker", level: 80 },
-      { name: "AWS", level: 75 },
+      { name: "Azure", level: 80 },
+      { name: "Docker", level: 50 },
       { name: "CI/CD", level: 70 },
-      { name: "Vercel/Netlify", level: 85 }
+      { name: "Linux", level: 60 }
     ]
   }
 ];

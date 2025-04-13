@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { ExternalLink, Github, ArrowRight } from 'lucide-react';
@@ -6,47 +5,137 @@ import { ExternalLink, Github, ArrowRight } from 'lucide-react';
 const projects = [
   {
     id: 1,
-    title: "E-commerce Platform",
-    description: "A full-stack e-commerce solution with React, Node.js and MongoDB. Features include user authentication, product management, and stripe payment integration.",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80"
+    title: "Gamified Habit Tracker",
+    description: "A gamified habit tracker with animations, level progression, and a rewards system to build consistency in habits.",
+    tags: ["React", "Framer Motion", "TailwindCSS"],
+    image: "https://images.unsplash.com/photo-1616587894052-24597c1bd4bc?auto=format&fit=crop&w=500&q=80",
+    github: "https://github.com/sairiteshdomakuntla/Gamified-Habit-Tracker",
+    live: "https://habit-tracker-iota-coral.vercel.app/"
   },
   {
     id: 2,
-    title: "AI Content Generator",
-    description: "An AI-powered application that generates marketing copy, blog posts, and social media content using OpenAI's GPT API.",
-    tags: ["Next.js", "TypeScript", "OpenAI", "TailwindCSS"],
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=500&q=80"
+    title: "Zyra - Virtual Assistant",
+    description: "A voice-powered neon-themed virtual assistant built with Gemini API and React, supporting real-time responses.",
+    tags: ["React", "Gemini API", "TailwindCSS"],
+    image: "https://images.unsplash.com/photo-1612832021024-7b8e1a0c6f3e?auto=format&fit=crop&w=500&q=80",
+    github: "https://github.com/sairiteshdomakuntla/Zyra---Virtual-Assistant",
+    live: "https://zyra-virtual-assistant.vercel.app/"
   },
   {
     id: 3,
-    title: "Finance Dashboard",
-    description: "Interactive dashboard for financial data visualization with real-time updates, filters, and customizable charts.",
-    tags: ["React", "Redux", "D3.js", "Firebase"],
-    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=500&q=80"
+    title: "AI Code Reviewer / Visualizer",
+    description: "An intelligent code reviewer evolving into a code visualizer that highlights execution flow, logic, and variables.",
+    tags: ["React", "AI", "Code Analysis"],
+    image: "https://images.unsplash.com/photo-1581093588401-12d8effadf29?auto=format&fit=crop&w=500&q=80",
+    github: "https://github.com/sairiteshdomakuntla/AI-Code-Reviewer",
+    live: "https://ai-code-reviewer-ruddy.vercel.app/"
   },
   {
     id: 4,
-    title: "Task Management App",
-    description: "A collaborative task management tool with drag-and-drop interface, real-time updates, and team collaboration features.",
-    tags: ["Vue.js", "Express", "PostgreSQL", "WebSockets"],
-    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=500&q=80"
+    title: "WhatsApp Clone",
+    description: "A MERN stack real-time messaging app with interest-based chat access and WebSocket-powered communication.",
+    tags: ["MongoDB", "Express", "React", "Node.js", "Socket.io"],
+    image: "https://images.unsplash.com/photo-1620192189865-1d661f2d8984?auto=format&fit=crop&w=500&q=80",
+    github: "https://github.com/sairiteshdomakuntla/whatsapp-clone1",
+    live: "https://github.com/sairiteshdomakuntla/whatsapp-clone1"
   },
   {
     id: 5,
-    title: "Fitness Tracker",
-    description: "Mobile-first web app for tracking workouts, nutrition, and progress with customizable goals and data visualization.",
-    tags: ["React Native", "GraphQL", "AWS", "Charts.js"],
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=500&q=80"
+    title: "Library Management System",
+    description: "A feature-rich system to manage book lending, integrated with Azure and deployed on a custom domain.",
+    tags: ["React", "Azure", "CI/CD", "MongoDB"],
+    image: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=500&q=80",
+    // github: "https://library.24ninjas.in",
+    // live: "https://library.24ninjas.in"
+    github: "https://github.com/sairiteshdomakuntla",
+    live: "https://github.com/sairiteshdomakuntla"
   },
   {
     id: 6,
-    title: "Real Estate Platform",
-    description: "Property listing and search platform with advanced filtering, map integration, and virtual tour functionality.",
-    tags: ["Next.js", "Prisma", "Google Maps API", "AWS S3"],
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=500&q=80"
+    title: "Event Management System",
+    description: "System to organize and manage events with scheduling and participant tracking capabilities.",
+    tags: ["React", "TailwindCSS", "Firebase"],
+    image: "https://images.unsplash.com/photo-1559027615-5c5c6e1c8b5d?auto=format&fit=crop&w=500&q=80",
+    github: "https://github.com/sairiteshdomakuntla/Event-Management",
+    live: "https://event-management-psi-seven.vercel.app/"
+  },
+  {
+    id: 7,
+    title: "Student Planner",
+    description: "Task management platform with CRUD for tasks and subtasks, featuring responsive cross-device usage.",
+    tags: ["React", "TailwindCSS", "LocalStorage"],
+    image: "https://images.unsplash.com/photo-1584697964154-8e8f6c6e8e8e?auto=format&fit=crop&w=500&q=80",
+    github: "https://github.com/sairiteshdomakuntla/study-planner-MA11",
+    live: "https://study-planner-ma-11.vercel.app/"
+  },
+  {
+    id: 8,
+    title: "Excelify",
+    description: "Engineered a data visualization platform with Excel file processing and interactive dashboard capabilities.",
+    tags: ["React", "ExcelJS", "Chart.js"],
+    image: "https://images.unsplash.com/photo-1581093588401-12d8effadf29?auto=format&fit=crop&w=500&q=80",
+    github: "https://github.com/askarthikey/xcelifiee-repo",
+    live: ""
+  },
+  {
+    id: 9,
+    title: "YTWrap",
+    description: "Developing a creator-editor platform with automated video processing pipeline using AWS S3 storage.",
+    tags: ["AWS", "React", "Node.js"],
+    image: "https://images.unsplash.com/photo-1612832021024-7b8e1a0c6f3e?auto=format&fit=crop&w=500&q=80",
+    github: "https://github.com/sairiteshdomakuntla",
+    live: ""
+  },
+  {
+    id: 10,
+    title: "Anime Stream",
+    description: "Created a streaming platform with optimized caching and lazy loading, reducing load times by 60%.",
+    tags: ["React", "Lazy Load", "Vercel"],
+    image: "https://images.unsplash.com/photo-1601933470928-c6e6c1c6c6c6?auto=format&fit=crop&w=500&q=80",
+    github: "https://github.com/kmahesh18/anime",
+    live: "https://zenkai-ochre.vercel.app/"
+  },
+  {
+    id: 11,
+    title: "Blog Website",
+    description: "Created a dynamic blog platform with role-based access control and global state management.",
+    tags: ["React", "TailwindCSS", "Vite"],
+    image: "https://images.unsplash.com/photo-1601933470928-c6e6c1c6c6c6?auto=format&fit=crop&w=500&q=80",
+    github: "https://github.com/sairiteshdomakuntla/InkFlow-BlogApp",
+    live: "https://inkflow-ritesh.vercel.app/"
+  },
+  {
+    id: 12,
+    title: "React Chat App",
+    description: "Real-time chat platform supporting group chats and direct messaging with 99.9% uptime.",
+    tags: ["React", "Socket.io", "Express", "MongoDB"],
+    image: "https://images.unsplash.com/photo-1612832021024-7b8e1a0c6f3e?auto=format&fit=crop&w=500&q=80",
+    github: "https://github.com/sairiteshdomakuntla/chat-app",
+    live: "https://chat-app-qaox.onrender.com/"
+  },
+  {
+    id: 13,
+    title: "Lost and Found",
+    description: "A real-time item reporting and recovery platform, enabling users to report lost or found items with live updates.",
+    tags: ["React", "Node.js", "Socket.io", "MongoDB"],
+    image: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=500&q=80",
+    github: "https://github.com/sairiteshdomakuntla/LostAndFound",
+    live: "https://lost-and-found-blue.vercel.app/"
+  },
+  {
+    id: 14,
+    title: "User Management System",
+    description: "Secure user authentication system with role-based access, using React, Redux, and React Hook Form for frontend validation.",
+    tags: ["React", "Redux", "TailwindCSS", "React Hook Form"],
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=500&q=80",
+    github: "https://github.com/sairiteshdomakuntla/User-Management-System",
+    live: "https://user-management-system-gamma.vercel.app/"
   }
-];
+
+]
+ 
+
+
 
 const ProjectsSection = () => {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
@@ -90,13 +179,17 @@ const ProjectsSection = () => {
                   )}
                 >
                   <a 
-                    href="#" 
+                    href={project.live} 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-12 h-12 rounded-full flex items-center justify-center bg-white text-black hover:bg-neon-blue transition-colors"
                   >
                     <ExternalLink size={18} />
                   </a>
                   <a 
-                    href="#" 
+                    href={project.github} 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-12 h-12 rounded-full flex items-center justify-center bg-white text-black hover:bg-neon-blue transition-colors"
                   >
                     <Github size={18} />
@@ -127,7 +220,9 @@ const ProjectsSection = () => {
                 {/* View details link */}
                 <div className="pt-3">
                   <a 
-                    href="#" 
+                    href={project.live} 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 text-neon-blue hover:text-neon-purple transition-colors group"
                   >
                     View details

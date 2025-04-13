@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 import { ArrowDown, FileText, Github, Mail } from 'lucide-react';
@@ -30,7 +29,7 @@ const HeroSection = () => {
             "text-4xl md:text-7xl font-bold bg-gradient-neon bg-clip-text text-transparent bg-300% animate-gradient-flow transition-all duration-700 transform",
             isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           )}>
-            JOHN DOE
+            SAI RITESH DOMAKUNTLA
           </h1>
 
           <p className={cn(
@@ -47,7 +46,8 @@ const HeroSection = () => {
             isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           )}>
             <a 
-              href="#" 
+              href="/sai_ritesh_resume.pdf" 
+              target="_blank" 
               className="px-6 py-3 bg-neon-blue text-black font-medium rounded-md flex items-center gap-2 hover:animate-pulse-glow transition-all"
             >
               <FileText size={18} />
@@ -55,7 +55,7 @@ const HeroSection = () => {
             </a>
             
             <a 
-              href="https://github.com" 
+              href="https://github.com/sairiteshdomakuntla" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="px-6 py-3 bg-white/5 border border-white/10 hover:border-neon-blue/50 text-white rounded-md flex items-center gap-2 transition-all hover:bg-white/10"

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
 
@@ -6,11 +5,13 @@ const technologies = [
   { name: 'React', icon: '⚛️' },
   { name: 'TypeScript', icon: '🔷' },
   { name: 'Node.js', icon: '🟢' },
+  { name: 'Python', icon: '🐍' },
+  { name: 'Django', icon: '🎸' },
   { name: 'PostgreSQL', icon: '🐘' },
-  { name: 'GraphQL', icon: '⬢' },
-  { name: 'AWS', icon: '☁️' },
+  { name: 'MongoDB', icon: '🍃' },
+  { name: 'NextJS', icon: '☁️' },
   { name: 'Docker', icon: '🐳' },
-  { name: 'Next.js', icon: '▲' }
+  { name: 'Git', icon: '📦' }
 ];
 
 const AboutSection = () => {
@@ -56,14 +57,14 @@ const AboutSection = () => {
           
           {/* Content area */}
           <div className="lg:col-span-7 space-y-6">
-            <h3 className="text-2xl font-semibold text-white">Full-Stack Developer & UX Enthusiast</h3>
+            <h3 className="text-2xl font-semibold text-white">Full-Stack Developer & Problem Solver</h3>
             
             <p className="text-gray-300">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              I am a passionate Full-Stack Developer with expertise in building scalable web applications and solving complex problems. With a strong foundation in both frontend and backend technologies, I create seamless user experiences while ensuring robust and efficient systems.
             </p>
             
             <p className="text-gray-300">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              My approach combines technical excellence with a keen eye for detail and user experience. I thrive in collaborative environments and am always eager to learn new technologies and methodologies to stay at the forefront of web development.
             </p>
             
             {/* Tech icons */}

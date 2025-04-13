@@ -28,7 +28,7 @@ const ContactSection = () => {
               <div className="space-y-6">
                 {/* Email */}
                 <a 
-                  href="mailto:contact@example.com" 
+                  href="mailto:sairiteshdomakuntla@gmail.com" 
                   className="flex items-center gap-4 text-gray-300 hover:text-neon-blue transition-colors group"
                 >
                   <div className="flex-shrink-0 w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-white/10 transition-colors">
@@ -36,13 +36,13 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="text-sm text-gray-400">Email</p>
-                    <p>contact@example.com</p>
+                    <p>sairiteshdomakuntla@gmail.com</p>
                   </div>
                 </a>
                 
                 {/* LinkedIn */}
                 <a 
-                  href="https://linkedin.com" 
+                  href="https://linkedin.com/in/sai-ritesh-domakuntla/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 text-gray-300 hover:text-neon-blue transition-colors group"
@@ -52,13 +52,13 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="text-sm text-gray-400">LinkedIn</p>
-                    <p>linkedin.com/in/username</p>
+                    <p>linkedin.com/in/sai-ritesh-domakuntla/</p>
                   </div>
                 </a>
                 
                 {/* GitHub */}
                 <a 
-                  href="https://github.com" 
+                  href="https://github.com/sairiteshdomakuntla" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 text-gray-300 hover:text-neon-blue transition-colors group"
@@ -68,7 +68,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="text-sm text-gray-400">GitHub</p>
-                    <p>github.com/username</p>
+                    <p>github.com/sairiteshdomakuntla</p>
                   </div>
                 </a>
               </div>
@@ -78,7 +78,8 @@ const ContactSection = () => {
             <div className="glass rounded-xl p-6 text-center">
               <h3 className="text-lg font-medium mb-4">Need my resume?</h3>
               <a 
-                href="#" 
+                href="/sai_ritesh_resume.pdf" 
+                target='_blank'
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-neon-blue to-neon-purple text-white font-medium rounded-md w-full hover:opacity-90 transition-opacity"
               >
                 Download Resume

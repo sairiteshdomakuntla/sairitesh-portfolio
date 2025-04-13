@@ -1,37 +1,74 @@
 
-import React from 'react';
-import { BadgeCheck, Award, Calendar, BookOpen } from 'lucide-react';
+// import React from 'react';
+// import { BadgeCheck, Award, Calendar, BookOpen } from 'lucide-react';
+
+import { BadgeCheck, BookOpen, Award, ShieldCheck, BarChart3, BrainCircuit, Trophy, Calendar } from "lucide-react";
 
 const certifications = [
   {
-    id: 1, 
-    title: "AWS Certified Solutions Architect", 
-    issuer: "Amazon Web Services",
-    date: "2023",
-    icon: <BadgeCheck className="h-6 w-6 text-neon-blue" />
+    id: 1,
+    title: "Webathon 3.0 Winner",
+    issuer: "Overnight Hackathon",
+    date: "2025",
+    icon: <Trophy className="h-6 w-6 text-neon-gold" />
   },
   {
     id: 2,
-    title: "Full-Stack Web Development",
-    issuer: "Udacity",
-    date: "2022",
-    icon: <BookOpen className="h-6 w-6 text-neon-purple" />
+    title: "Inter IIT Competitive Programming Conclave",
+    issuer: "Inter IIT Consortium",
+    date: "2024",
+    icon: <Trophy className="h-6 w-6 text-neon-gold" />,
+    link: "https://drive.google.com/file/d/1Ag4lY1o7yJNYHXXhKikRYfhPSHzWjsGC/view?usp=drive_link"
   },
   {
     id: 3,
-    title: "React Advanced Patterns",
-    issuer: "Frontend Masters",
-    date: "2022",
-    icon: <BadgeCheck className="h-6 w-6 text-neon-blue" />
+    title: "HacktoberFest 2024 Contributor",
+    issuer: "DigitalOcean & Holopin",
+    date: "2024",
+    icon: <BadgeCheck className="h-6 w-6 text-neon-blue" />,
+    link: "https://www.holopin.io/hacktoberfest2024/userbadge/cm2rxkagg208860cmhqpy5065r"
   },
   {
     id: 4,
-    title: "Best Developer Award",
-    issuer: "Annual Dev Conference",
-    date: "2023",
-    icon: <Award className="h-6 w-6 text-neon-green" />
+    title: "Cyber Security Certification",
+    issuer: "Microsoft-TataStrive",
+    date: "2024",
+    icon: <ShieldCheck className="h-6 w-6 text-neon-red" />,
+    link: "https://drive.google.com/file/d/1BfZH9pLGmu4oi8FHRwMpd64EJ34qouNv/view?usp=sharing"
+  },
+  {
+    id: 5,
+    title: "Summer of AI Internship",
+    issuer: "Swechha Foundation",
+    date: "2024",
+    icon: <BrainCircuit className="h-6 w-6 text-neon-purple" />,
+    link: "https://drive.google.com/file/d/1kt2F9gSzH9Yt5gifH_-WUU6H1IPEaWha/view?usp=sharing"
+  },
+  {
+    id: 6,
+    title: "Python Certification",
+    issuer: "Infosys Springboard",
+    date: "2024",
+    icon: <BookOpen className="h-6 w-6 text-neon-green" />,
+    link: "https://drive.google.com/file/d/1maMlU59raWuNfsFD0_WEtd4gq_pcYuAI/view?usp=sharing"
+  },
+  {
+    id: 7,
+    title: "Top 2% Rank - CodeFrenzy",
+    issuer: "CodeFrenzy",
+    date: "2024",
+    icon: <Trophy className="h-6 w-6 text-neon-orange" />
+  },
+  {
+    id: 8,
+    title: "Tableau Data Visualization",
+    issuer: "Internshala",
+    date: "2024",
+    icon: <BarChart3 className="h-6 w-6 text-neon-cyan" />,
+    link: "https://drive.google.com/file/d/1Z8Fsf6hn7ZlFxAQAwTM2nWDt9RCpmunG/view?usp=sharing"
   }
 ];
+
 
 const CertificationsSection = () => {
   return (
