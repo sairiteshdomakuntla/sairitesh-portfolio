@@ -8,7 +8,7 @@ const projects = [
     title: "Gamified Habit Tracker",
     description: "A gamified habit tracker with animations, level progression, and a rewards system to build consistency in habits.",
     tags: ["React", "Framer Motion", "TailwindCSS"],
-    image: "https://images.unsplash.com/photo-1616587894052-24597c1bd4bc?auto=format&fit=crop&w=500&q=80",
+    image: "/img1.png",
     github: "https://github.com/sairiteshdomakuntla/Gamified-Habit-Tracker",
     live: "https://habit-tracker-iota-coral.vercel.app/"
   },
@@ -17,7 +17,7 @@ const projects = [
     title: "Zyra - Virtual Assistant",
     description: "A voice-powered neon-themed virtual assistant built with Gemini API and React, supporting real-time responses.",
     tags: ["React", "Gemini API", "TailwindCSS"],
-    image: "https://images.unsplash.com/photo-1612832021024-7b8e1a0c6f3e?auto=format&fit=crop&w=500&q=80",
+    image: "/img2.jpg",
     github: "https://github.com/sairiteshdomakuntla/Zyra---Virtual-Assistant",
     live: "https://zyra-virtual-assistant.vercel.app/"
   },
@@ -26,7 +26,7 @@ const projects = [
     title: "AI Code Reviewer / Visualizer",
     description: "An intelligent code reviewer evolving into a code visualizer that highlights execution flow, logic, and variables.",
     tags: ["React", "AI", "Code Analysis"],
-    image: "https://images.unsplash.com/photo-1581093588401-12d8effadf29?auto=format&fit=crop&w=500&q=80",
+    image: "/img3.jpg",
     github: "https://github.com/sairiteshdomakuntla/AI-Code-Reviewer",
     live: "https://ai-code-reviewer-ruddy.vercel.app/"
   },
@@ -35,63 +35,16 @@ const projects = [
     title: "WhatsApp Clone",
     description: "A MERN stack real-time messaging app with interest-based chat access and WebSocket-powered communication.",
     tags: ["MongoDB", "Express", "React", "Node.js", "Socket.io"],
-    image: "https://images.unsplash.com/photo-1620192189865-1d661f2d8984?auto=format&fit=crop&w=500&q=80",
+    image: "/img4.jpg",
     github: "https://github.com/sairiteshdomakuntla/whatsapp-clone1",
     live: "https://github.com/sairiteshdomakuntla/whatsapp-clone1"
-  },
-  {
-    id: 5,
-    title: "Library Management System",
-    description: "A feature-rich system to manage book lending, integrated with Azure and deployed on a custom domain.",
-    tags: ["React", "Azure", "CI/CD", "MongoDB"],
-    image: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=500&q=80",
-    // github: "https://library.24ninjas.in",
-    // live: "https://library.24ninjas.in"
-    github: "https://github.com/sairiteshdomakuntla",
-    live: "https://github.com/sairiteshdomakuntla"
-  },
-  {
-    id: 6,
-    title: "Event Management System",
-    description: "System to organize and manage events with scheduling and participant tracking capabilities.",
-    tags: ["React", "TailwindCSS", "Firebase"],
-    image: "https://images.unsplash.com/photo-1559027615-5c5c6e1c8b5d?auto=format&fit=crop&w=500&q=80",
-    github: "https://github.com/sairiteshdomakuntla/Event-Management",
-    live: "https://event-management-psi-seven.vercel.app/"
-  },
-  {
-    id: 7,
-    title: "Student Planner",
-    description: "Task management platform with CRUD for tasks and subtasks, featuring responsive cross-device usage.",
-    tags: ["React", "TailwindCSS", "LocalStorage"],
-    image: "https://images.unsplash.com/photo-1584697964154-8e8f6c6e8e8e?auto=format&fit=crop&w=500&q=80",
-    github: "https://github.com/sairiteshdomakuntla/study-planner-MA11",
-    live: "https://study-planner-ma-11.vercel.app/"
-  },
-  {
-    id: 8,
-    title: "Excelify",
-    description: "Engineered a data visualization platform with Excel file processing and interactive dashboard capabilities.",
-    tags: ["React", "ExcelJS", "Chart.js"],
-    image: "https://images.unsplash.com/photo-1581093588401-12d8effadf29?auto=format&fit=crop&w=500&q=80",
-    github: "https://github.com/askarthikey/xcelifiee-repo",
-    live: ""
-  },
-  {
-    id: 9,
-    title: "YTWrap",
-    description: "Developing a creator-editor platform with automated video processing pipeline using AWS S3 storage.",
-    tags: ["AWS", "React", "Node.js"],
-    image: "https://images.unsplash.com/photo-1612832021024-7b8e1a0c6f3e?auto=format&fit=crop&w=500&q=80",
-    github: "https://github.com/sairiteshdomakuntla",
-    live: ""
   },
   {
     id: 10,
     title: "Anime Stream",
     description: "Created a streaming platform with optimized caching and lazy loading, reducing load times by 60%.",
-    tags: ["React", "Lazy Load", "Vercel"],
-    image: "https://images.unsplash.com/photo-1601933470928-c6e6c1c6c6c6?auto=format&fit=crop&w=500&q=80",
+    tags: ["NextJS", "Lazy Load", "Vercel"],
+    image: "/img10.jpg",
     github: "https://github.com/kmahesh18/anime",
     live: "https://zenkai-ochre.vercel.app/"
   },
@@ -100,16 +53,61 @@ const projects = [
     title: "Blog Website",
     description: "Created a dynamic blog platform with role-based access control and global state management.",
     tags: ["React", "TailwindCSS", "Vite"],
-    image: "https://images.unsplash.com/photo-1601933470928-c6e6c1c6c6c6?auto=format&fit=crop&w=500&q=80",
+    image: "/img11.png",
     github: "https://github.com/sairiteshdomakuntla/InkFlow-BlogApp",
     live: "https://inkflow-ritesh.vercel.app/"
+  },
+  {
+    id: 5,
+    title: "Library Management System",
+    description: "A feature-rich system to manage book lending, integrated with Azure and deployed on a custom domain.",
+    tags: ["React", "Azure", "CI/CD", "MongoDB"],
+    image: "/img5.jpg",
+    github: "https://github.com/sairiteshdomakuntla",
+    live: "https://github.com/sairiteshdomakuntla"
+  },
+  {
+    id: 6,
+    title: "Event Management System",
+    description: "System to organize and manage events with scheduling and participant tracking capabilities.",
+    tags: ["React", "TailwindCSS", "Firebase"],
+    image: "/img6.jpg",
+    github: "https://github.com/sairiteshdomakuntla/Event-Management",
+    live: "https://event-management-psi-seven.vercel.app/"
+  },
+  {
+    id: 7,
+    title: "Student Planner",
+    description: "Task management platform with CRUD for tasks and subtasks, featuring responsive cross-device usage.",
+    tags: ["React", "TailwindCSS", "LocalStorage"],
+    image: "/img7.png",
+    github: "https://github.com/sairiteshdomakuntla/study-planner-MA11",
+    live: "https://study-planner-ma-11.vercel.app/"
+  },
+  {
+    id: 8,
+    title: "Excelify",
+    description: "Engineered a data visualization platform with Excel file processing and interactive dashboard capabilities.",
+    tags: ["React", "ExcelJS", "Chart.js"],
+    image: "/img8.png",
+    github: "https://github.com/askarthikey/xcelifiee-repo",
+    live: ""
+  },
+  {
+    id: 9,
+    title: "YTWrap",
+    description: "Developing a creator-editor platform with automated video processing pipeline using AWS S3 storage.",
+    tags: ["AWS", "React", "Node.js"],
+    image: "/img9.png",
+    github: "https://github.com/sairiteshdomakuntla",
+    live: ""
   },
   {
     id: 12,
     title: "React Chat App",
     description: "Real-time chat platform supporting group chats and direct messaging with 99.9% uptime.",
     tags: ["React", "Socket.io", "Express", "MongoDB"],
-    image: "https://images.unsplash.com/photo-1612832021024-7b8e1a0c6f3e?auto=format&fit=crop&w=500&q=80",
+    image: "/img12.png",
     github: "https://github.com/sairiteshdomakuntla/chat-app",
     live: "https://chat-app-qaox.onrender.com/"
   },
@@ -118,7 +116,7 @@ const projects = [
     title: "Lost and Found",
     description: "A real-time item reporting and recovery platform, enabling users to report lost or found items with live updates.",
     tags: ["React", "Node.js", "Socket.io", "MongoDB"],
-    image: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=500&q=80",
+    image: "/img13.png",
     github: "https://github.com/sairiteshdomakuntla/LostAndFound",
     live: "https://lost-and-found-blue.vercel.app/"
   },
@@ -127,12 +125,12 @@ const projects = [
     title: "User Management System",
     description: "Secure user authentication system with role-based access, using React, Redux, and React Hook Form for frontend validation.",
     tags: ["React", "Redux", "TailwindCSS", "React Hook Form"],
-    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=500&q=80",
+    image: "/img14.png",
     github: "https://github.com/sairiteshdomakuntla/User-Management-System",
     live: "https://user-management-system-gamma.vercel.app/"
   }
-
 ]
+
  
 
 
