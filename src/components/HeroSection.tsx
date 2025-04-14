@@ -79,7 +79,7 @@ const HeroSection = () => {
         {/* Animated intro */}
         <div className="flex flex-col items-center w-full px-4 md:px-0 md:space-y-6">
           <h1 className={cn(
-            "text-4xl md:text-7xl font-bold bg-gradient-neon bg-clip-text text-transparent bg-300% animate-gradient-flow transition-all duration-700 transform mb-3 md:mb-0",
+            "text-4xl md:text-7xl font-bold text-white bg-gradient-to-r from-neon-blue via-neon-purple to-neon-blue bg-clip-text text-transparent bg-300% animate-gradient-flow transition-all duration-700 transform mb-3 md:mb-0",
             isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           )}>
             SAI RITESH DOMAKUNTLA
