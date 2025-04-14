@@ -1,6 +1,6 @@
-
 import React from 'react';
-import { Github, Linkedin, Mail, MessageSquare, Send } from 'lucide-react';
+import { Github, Linkedin, Mail, MessageSquare } from 'lucide-react';
+import ContactForm from './ContactForm';
 
 const ContactSection = () => {
   return (
@@ -90,65 +90,7 @@ const ContactSection = () => {
           {/* Contact form */}
           <div className="lg:col-span-3 glass rounded-xl p-6 md:p-8">
             <h3 className="text-xl font-semibold mb-6">Send Me a Message</h3>
-            
-            <form className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm text-gray-400 mb-2">
-                    Name
-                  </label>
-                  <input 
-                    type="text" 
-                    id="name" 
-                    className="w-full px-4 py-3 rounded-md bg-white/5 border border-white/10 text-white focus:border-neon-blue/50 focus:outline-none"
-                    placeholder="Your name"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm text-gray-400 mb-2">
-                    Email
-                  </label>
-                  <input 
-                    type="email" 
-                    id="email" 
-                    className="w-full px-4 py-3 rounded-md bg-white/5 border border-white/10 text-white focus:border-neon-blue/50 focus:outline-none"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-              </div>
-              
-              <div>
-                <label htmlFor="subject" className="block text-sm text-gray-400 mb-2">
-                  Subject
-                </label>
-                <input 
-                  type="text" 
-                  id="subject" 
-                  className="w-full px-4 py-3 rounded-md bg-white/5 border border-white/10 text-white focus:border-neon-blue/50 focus:outline-none"
-                  placeholder="What is this regarding?"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm text-gray-400 mb-2">
-                  Message
-                </label>
-                <textarea 
-                  id="message" 
-                  rows={5}
-                  className="w-full px-4 py-3 rounded-md bg-white/5 border border-white/10 text-white focus:border-neon-blue/50 focus:outline-none"
-                  placeholder="Your message here..."
-                ></textarea>
-              </div>
-              
-              <button 
-                type="submit" 
-                className="px-6 py-3 bg-neon-blue text-black font-medium rounded-md flex items-center gap-2 hover:animate-pulse-glow transition-all w-full justify-center md:w-auto"
-              >
-                <Send size={18} />
-                Send Message
-              </button>
-            </form>
+            <ContactForm />
           </div>
         </div>
       </div>

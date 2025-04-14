@@ -7,14 +7,14 @@ const experiences = [
     role: "Full Stack Developer",
     icon: <Briefcase className="w-5 h-5 sm:w-6 sm:h-6 text-neon-green" />,
     description: "Building custom web solutions and delivering high-quality applications for clients using modern web technologies. Specializing in responsive web applications with modern frameworks and best practices.",
-    period: "2023 - Present",
+    period: "2025 - Present",
     link: "#",
     achievements: [
       "Developed and deployed custom web applications for multiple clients",
       "Implemented responsive designs and modern UI/UX practices",
       "Managed entire project lifecycles from requirements gathering to deployment"
     ],
-    technologies: ["React", "Node.js", "TypeScript", "Tailwind CSS", "MongoDB", "AWS"]
+    technologies: ["React", "Node.js", "TypeScript", "Tailwind CSS", "MongoDB", "Azure"]
   }
 ];
 
