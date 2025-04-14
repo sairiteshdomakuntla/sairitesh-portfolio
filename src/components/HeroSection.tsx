@@ -20,7 +20,7 @@ const cpStats = [
   },
   {
     platform: "CodeChef",
-    rating: "1539",
+    rating: "1500+",
     solved: "500+",
     stars: "2★",
     icon: <Star className="w-4 h-4 text-yellow-400" />,
