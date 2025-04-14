@@ -14,16 +14,16 @@ const experiences = [
       "Implemented responsive designs and modern UI/UX practices",
       "Managed entire project lifecycles from requirements gathering to deployment"
     ],
-    technologies: ["React", "Node.js", "TypeScript", "Tailwind CSS", "MongoDB", "Azure"]
+    technologies: ["React", "Node.js", "CI/CD", "Tailwind CSS", "MongoDB", "Azure"]
   }
 ];
 
 const ExperienceSection = () => {
   return (
-    <section id="experience" className="section-padding relative px-4">
+    <section id="experience" className="section-padding relative">
       <div className="absolute inset-0 grid-bg opacity-30" />
       
-      <div className="container mx-auto max-w-6xl relative z-10">
+      <div className="w-full md:container mx-auto max-w-6xl relative z-10">
         <div className="text-center mb-8 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 pb-4 relative inline-block">
             Professional Experience

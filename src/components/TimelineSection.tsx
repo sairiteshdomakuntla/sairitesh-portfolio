@@ -58,10 +58,10 @@ const timelineEvents = [
 
 const TimelineSection = () => {
   return (
-    <section id="timeline" className="section-padding relative px-4">
+    <section id="timeline" className="section-padding relative">
       <div className="absolute inset-0 grid-bg opacity-30" />
       
-      <div className="container mx-auto max-w-4xl relative z-10">
+      <div className="w-full md:container mx-auto max-w-6xl relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-2 pb-4 relative inline-block">
             My Journey

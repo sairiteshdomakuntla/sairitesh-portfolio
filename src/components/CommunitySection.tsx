@@ -22,22 +22,22 @@ const communities = [
     tags: ["Open Source", "Collaboration", "Community Support"]
   },
   {
-    name: "Tech Community Mentor",
-    role: "Student Mentor",
+    name: "Turing Hut Coding Club",
+    role: "Core Member",
     icon: <Heart className="w-5 h-5 sm:w-6 sm:h-6 text-neon-red" />,
-    description: "Mentoring and guiding fellow students in their tech journey, sharing knowledge and best practices.",
+    description: "Actively contributing to the college's coding club, organizing events, and fostering a collaborative learning environment.",
     period: "2023 - Present",
     link: "#",
-    tags: ["Mentoring", "Knowledge Sharing", "Tech Education"]
-  }
+    tags: ["Club Activities", "Event Organization", "Teamwork"]
+  }  
 ];
 
 const CommunitySection = () => {
   return (
-    <section id="community" className="section-padding relative px-4">
+    <section id="community" className="section-padding relative">
       <div className="absolute inset-0 grid-bg opacity-30" />
       
-      <div className="container mx-auto max-w-6xl relative z-10">
+      <div className="w-full md:container mx-auto max-w-6xl relative z-10">
         <div className="text-center mb-8 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 pb-4 relative inline-block">
             Community Involvement

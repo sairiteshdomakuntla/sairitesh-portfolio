@@ -18,9 +18,9 @@ const AboutSection = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <section id="about" className="section-padding relative px-4">
-      <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
+    <section id="about" className="section-padding relative">
+      <div className="w-full md:container mx-auto max-w-6xl">
+        <div className="text-center mb-12 md:mb-16 about-section-title">
           <h2 className="text-3xl md:text-4xl font-bold mb-2 pb-4 relative inline-block">
             About Me
             <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-neon"></span>
@@ -56,8 +56,8 @@ const AboutSection = () => {
           </div>
           
           {/* Content area */}
-          <div className="lg:col-span-7 space-y-6">
-            <h3 className="text-2xl font-semibold text-white">Full-Stack Developer & Problem Solver</h3>
+          <div className="lg:col-span-7 space-y-4 md:space-y-6 about-content">
+            <h3 className="text-xl md:text-2xl font-semibold text-white">Full-Stack Developer & Problem Solver</h3>
             
             <p className="text-gray-300">
               I am a passionate Full-Stack Developer with expertise in building scalable web applications and solving complex problems. With a strong foundation in both frontend and backend technologies, I create seamless user experiences while ensuring robust and efficient systems.

@@ -1,9 +1,26 @@
 import React, { useState, useEffect } from 'react';
+import { X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const NavBar = () => {
   const [activeSection, setActiveSection] = useState('hero');
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // Smooth scroll to section
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const navbarHeight = 64; // Height of the navbar
+      const sectionPosition = section.getBoundingClientRect().top;
+      const offsetPosition = sectionPosition + window.pageYOffset - navbarHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   // Update active section based on scroll position
   useEffect(() => {
@@ -14,7 +31,7 @@ const NavBar = () => {
       // Set active section based on scroll position
       const sections = [
         'hero',
-        'timeline',
+        // 'timeline',
         'about',
         'skills',
         'projects',
@@ -22,12 +39,14 @@ const NavBar = () => {
         'certifications',
         'contact'
       ];
+      
       const currentSection = sections.find(section => {
         const element = document.getElementById(section);
         if (!element) return false;
         
         const rect = element.getBoundingClientRect();
-        return rect.top <= 100 && rect.bottom >= 100;
+        const navbarHeight = 64; // Height of the navbar
+        return rect.top <= navbarHeight && rect.bottom >= navbarHeight;
       });
       
       if (currentSection) {
@@ -38,17 +57,6 @@ const NavBar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  // Smooth scroll to section
-  const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      window.scrollTo({
-        top: section.offsetTop - 80,
-        behavior: 'smooth'
-      });
-    }
-  };
 
   return (
     <nav 
@@ -91,13 +99,49 @@ const NavBar = () => {
           })}
         </div>
         
-        <button className="md:hidden text-white">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <line x1="4" x2="20" y1="12" y2="12"></line>
-            <line x1="4" x2="20" y1="6" y2="6"></line>
-            <line x1="4" x2="20" y1="18" y2="18"></line>
-          </svg>
-        </button>
+        <div className="md:hidden">
+          <button 
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="text-white p-2"
+          >
+            {mobileMenuOpen ? (
+              <X size={24} />
+            ) : (
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="4" x2="20" y1="12" y2="12"></line>
+                <line x1="4" x2="20" y1="6" y2="6"></line>
+                <line x1="4" x2="20" y1="18" y2="18"></line>
+              </svg>
+            )}
+          </button>
+          
+          {mobileMenuOpen && (
+            <div className="fixed top-16 left-0 right-0 bottom-0 bg-[#0f0f19]/95 backdrop-blur-md z-50 p-4 border-t border-white/10 overflow-y-auto">
+              <div className="flex flex-col space-y-3 max-w-4xl mx-auto">
+                {['Hero', 'About', 'Skills', 'Projects', 'Community', 'Certifications', 'Contact'].map((item) => {
+                  const sectionId = item.toLowerCase();
+                  return (
+                    <button
+                      key={item}
+                      onClick={() => {
+                        scrollToSection(sectionId);
+                        setMobileMenuOpen(false);
+                      }}
+                      className={cn(
+                        "px-4 py-3 rounded-md text-base transition-all text-left w-full",
+                        activeSection === sectionId 
+                          ? "text-neon-blue bg-white/5" 
+                          : "text-gray-300 hover:text-white hover:bg-white/5"
+                      )}
+                    >
+                      {item}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </nav>
   );

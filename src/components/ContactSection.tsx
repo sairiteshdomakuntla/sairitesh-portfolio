@@ -4,8 +4,8 @@ import ContactForm from './ContactForm';
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="section-padding relative px-4">
-      <div className="container mx-auto max-w-5xl">
+    <section id="contact" className="section-padding relative">
+      <div className="w-full md:container mx-auto max-w-5xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-2 pb-4 relative inline-block">
             Get In Touch
